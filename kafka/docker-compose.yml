@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   zookeeper:
+    container_name: zookeeper
     image: strimzi/kafka:0.19.0-kafka-2.5.0
     command: [
       "sh", "-c",
@@ -12,6 +13,7 @@ services:
     environment:
       LOG_DIR: /tmp/logs
   kafka:
+    container_name: kafka
     image: strimzi/kafka:0.19.0-kafka-2.5.0
     command: [
       "sh", "-c",
