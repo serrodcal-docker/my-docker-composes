@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  localstack:
+    image: postgres:10.5
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=test_user 
+      - POSTGRES_PASSWORD=test_password 
+      - POSTGRES_DB=test
