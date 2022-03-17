@@ -1,4 +1,4 @@
-# Use root/example as user/password credentials
+# Use root/example as user/password credentials: docker exec -ti mongo mongo admin -u root -p 'example'
 version: '3.9'
 
 networks:
@@ -9,6 +9,8 @@ services:
   mongo:
     container_name: mongo
     image: mongo
+    ports:
+      - 27017:27017
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
