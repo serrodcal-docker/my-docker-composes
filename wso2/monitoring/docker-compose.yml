@@ -52,12 +52,13 @@ services:
   # Viewing Statistics: https://apim.docs.wso2.com/en/latest/observe/micro-integrator/viewing-cloud-native-observability-statistics/
   health:
     container_name: "health"
-    image: wso2/wso2mi:4.0.0
+    image: wso2/wso2mi:4.1.0
     environment:
-      - JAVA_OPTS=-DenablePrometheusApi=true -Dcom.sun.management.jmxremote.port=9010 -Dcom.sun.management.jmxremote.rmi.port=9010 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
+      - JAVA_OPTS=-DenableCorrelationLogs=true -DenablePrometheusApi=true -Dcom.sun.management.jmxremote.port=9010 -Dcom.sun.management.jmxremote.rmi.port=9010 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
     volumes:
-      - ./config/health/api/Health.xml:/home/wso2carbon/wso2mi-4.0.0/repository/deployment/server/synapse-configs/default/api/Health.xml
-      - ./config/health/deployment.toml:/home/wso2carbon/wso2mi-4.0.0/conf/deployment.toml
+      - ./config/health/api/Health.xml:/home/wso2carbon/wso2mi-4.1.0/repository/deployment/server/synapse-configs/default/api/Health.xml
+      - ./config/health/deployment.toml:/home/wso2carbon/wso2mi-4.1.0/conf/deployment.toml
+      - ./config/health/log4j2.properties:/home/wso2carbon/wso2mi-4.1.0/conf/log4j2.properties
     ports: 
       - "8290:8290" # HTTP
       - "9201:9201" # Metrics
