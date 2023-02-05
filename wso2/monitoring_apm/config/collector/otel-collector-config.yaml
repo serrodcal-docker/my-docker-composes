@@ -1,0 +1,35 @@
+receivers:
+  jaeger:
+    protocols:
+      # grpc:
+      # thrift_binary:
+      thrift_compact:
+        endpoint: 0.0.0.0:6831
+      # thrift_http:
+
+exporters:
+  otlp: 
+  # otlphttp:
+    # Elastic APM server https endpoint without the "https://" prefix
+    endpoint: 'http://apm-server:8200'
+    tls:
+      insecure: true
+    # headers:
+      # # Elastic APM Server secret token
+      # Authorization: 'XXXXXXXXXXXXXXX'  
+  logging:
+    loglevel: DEBUG
+
+processors:
+  batch:
+
+extensions:
+  health_check:
+
+service:
+  extensions: [health_check]
+  pipelines:
+    traces:
+      receivers: [jaeger]
+      exporters: [otlp]
+      # processors: [batch]
