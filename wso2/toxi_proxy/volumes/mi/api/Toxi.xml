@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api xmlns="http://ws.apache.org/ns/synapse"
+    name="Toxi"
+    context="/toxi"
+    statistics="enable"
+    trace="enable">
+    <resource methods="GET"
+        uri-template="/test">
+        <inSequence>
+            <log>
+                <property name="**** [API]" value="IN - /toxi/test" />
+            </log>
+            <send>
+                <endpoint name="ToxiBackend">
+                    <http method="GET"
+                        uri-template="http://toxiproxy:8080/hospital/SVQ002">
+                        <timeout>
+                            <duration>5000</duration>
+                            <responseAction>fault</responseAction>
+                        </timeout>
+                        <!-- <markForSuspension>
+                            <errorCodes>
+                                101000,101001,101500,101501,101503,101504,101505,101506,101507,101508,101509,101510
+                            </errorCodes>
+                            <retriesBeforeSuspension>3</retriesBeforeSuspension>
+                            <retryDelay>1000</retryDelay>
+                        </markForSuspension> -->
+                        <suspendOnFailure>
+                            <errorCodes>
+                                101000,101001,101500,101501,101503,101504,101505,101506,101507,101508,101509,101510
+                            </errorCodes>
+                            <initialDuration>10000</initialDuration>
+                            <progressionFactor>2</progressionFactor>
+                            <maximumDuration>60000</maximumDuration>
+                        </suspendOnFailure>
+                    </http>
+                </endpoint>
+            </send>
+        </inSequence>
+        <outSequence>
+            <log>
+                <property name="
+    **** [API]" value=" OUT - / toxi/ test" />
+            </log>
+            <send />
+        </outSequence>
+        <!-- <faultSequence>
+            <send />
+        </faultSequence> -->
+    </resource>
+</api>

@@ -1,0 +1,8 @@
+[
+    {
+        "name": "toxi_hospital_blue",
+        "listen": "[::]:8080",
+        "upstream": "hospital-blue:8080",
+        "enabled": true
+    }
+]
