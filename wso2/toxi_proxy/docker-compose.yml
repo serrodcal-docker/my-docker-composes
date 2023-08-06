@@ -25,6 +25,9 @@ services:
   hospital-blue:
     container_name: "hospital-blue"
     image: serrodcal/hospital:1.0.0-native-distroless
+    mem_limit: 1024M
+    mem_reservation: 1024M
+    cpus: 1
     ports: 
       - "8080:8080"
     depends_on:
@@ -49,6 +52,9 @@ services:
   mi:
     container_name: "mi"
     image: docker.wso2.com/wso2mi:4.1.0
+    mem_limit: 1024M
+    mem_reservation: 1024M
+    cpus: 1
     environment:
       - JAVA_OPTS=-DenableCorrelationLogs=true -DenablePrometheusApi=true -Dcom.sun.management.jmxremote.port=9010 -Dcom.sun.management.jmxremote.rmi.port=9010 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false
     volumes:
