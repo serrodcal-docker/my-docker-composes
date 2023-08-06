@@ -1,0 +1,5 @@
+hostPort: mi:9010
+username:
+password:
+rules:
+  - pattern: ".*"
