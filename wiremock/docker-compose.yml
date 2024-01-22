@@ -1,0 +1,17 @@
+version: '3.9'
+
+networks:
+  local:
+
+services:
+
+  wiremock:
+    container_name: "wiremock"
+    image: wiremock/wiremock:3.3.1
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./config/wiremock/mappings/multipart.json:/home/wiremock/mappings/multipart.json
+      - ./config/wiremock/files/Libro1.xlsx:/home/wiremock/__files/Libro1.xlsx
+    networks:
+      - local

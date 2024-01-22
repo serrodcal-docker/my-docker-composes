@@ -1,0 +1,426 @@
+{
+  "mappings" : [ {
+    "id" : "9d848f2b-8a57-4599-92ba-6e96cb1a99bb",
+    "name" : "Info for a specific pet",
+    "request" : {
+      "urlPathTemplate" : "/pets/{petId}",
+      "method" : "GET",
+      "pathParameters" : {
+        "petId" : {
+          "equalTo" : "13y1"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"id\" : 8771057527806299343,\n  \"name\" : \"Chantell Baumbach I\",\n  \"tag\" : \"non\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "9d848f2b-8a57-4599-92ba-6e96cb1a99bb",
+    "persistent" : true,
+    "priority" : 3,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:31:16.663945051Z",
+          "via" : "OAS3_IMPORT",
+          "by" : "mymk1"
+        },
+        "updated" : {
+          "at" : "2024-01-22T19:31:42.429524762Z",
+          "via" : "IMPORT",
+          "by" : "mymk1"
+        },
+        "oas" : {
+          "operationId" : "showPetById",
+          "schema" : {
+            "required" : [ "id", "name" ],
+            "type" : "object",
+            "properties" : {
+              "id" : {
+                "type" : "integer",
+                "format" : "int64"
+              },
+              "name" : {
+                "type" : "string"
+              },
+              "tag" : {
+                "type" : "string"
+              }
+            }
+          }
+        },
+        "response-example-attachment" : "default"
+      }
+    }
+  }, {
+    "id" : "e308247f-34da-4a50-a0ba-fbaa8c869a55",
+    "name" : "Create a pet",
+    "request" : {
+      "urlPathTemplate" : "/pets",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "e308247f-34da-4a50-a0ba-fbaa8c869a55",
+    "persistent" : true,
+    "priority" : 3,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:31:16.663812273Z",
+          "via" : "OAS3_IMPORT",
+          "by" : "mymk1"
+        },
+        "updated" : {
+          "at" : "2024-01-22T19:31:42.425652275Z",
+          "via" : "IMPORT",
+          "by" : "mymk1"
+        },
+        "oas" : {
+          "operationId" : "createPets"
+        },
+        "response-example-attachment" : "default"
+      }
+    }
+  }, {
+    "id" : "ca4dbbda-3d1b-409c-a234-221a7ee9038d",
+    "name" : "List all pets",
+    "request" : {
+      "urlPathTemplate" : "/pets",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"id\" : 8857729506264183327,\n  \"name\" : \"Charlena Buckridge\",\n  \"tag\" : \"dolorem\"\n}, {\n  \"id\" : 3497167915191776928,\n  \"name\" : \"Lawanna Waelchi\",\n  \"tag\" : \"sed\"\n}, {\n  \"id\" : 4388001716641978706,\n  \"name\" : \"Arlyne Kuhlman\",\n  \"tag\" : \"quia\"\n}, {\n  \"id\" : 274935273927173917,\n  \"name\" : \"Nestor Sawayn\",\n  \"tag\" : \"eeeet\"\n}, {\n  \"id\" : 3615455560982824509,\n  \"name\" : \"Mr. Jefferson Von\",\n  \"tag\" : \"possimus\"\n}, {\n  \"id\" : 7069750649303221430,\n  \"name\" : \"Kaye Treutel\",\n  \"tag\" : \"nisi\"\n}, {\n  \"id\" : 1057333321823112606,\n  \"name\" : \"Ricardo Sawayn\",\n  \"tag\" : \"reprehenderit\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "ca4dbbda-3d1b-409c-a234-221a7ee9038d",
+    "persistent" : true,
+    "priority" : 3,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:31:16.663144912Z",
+          "via" : "OAS3_IMPORT",
+          "by" : "mymk1"
+        },
+        "updated" : {
+          "at" : "2024-01-22T19:31:42.420405988Z",
+          "via" : "IMPORT",
+          "by" : "mymk1"
+        },
+        "oas" : {
+          "operationId" : "listPets",
+          "schema" : {
+            "maxItems" : 100,
+            "type" : "array",
+            "items" : {
+              "required" : [ "id", "name" ],
+              "type" : "object",
+              "properties" : {
+                "id" : {
+                  "type" : "integer",
+                  "format" : "int64"
+                },
+                "name" : {
+                  "type" : "string"
+                },
+                "tag" : {
+                  "type" : "string"
+                }
+              }
+            }
+          }
+        },
+        "response-example-attachment" : "default"
+      }
+    }
+  }, {
+    "id" : "405bf918-4fab-4083-bb36-748bfe3c3022",
+    "name" : "Info for a specific pet - generic",
+    "request" : {
+      "urlPathTemplate" : "/pets/{petId}",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"id\" : 5601610895634792260,\n  \"name\" : \"Sanford Bartell\",\n  \"tag\" : \"iiiid\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "405bf918-4fab-4083-bb36-748bfe3c3022",
+    "persistent" : true,
+    "priority" : 4,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:31:16.664358522Z",
+          "via" : "OAS3_IMPORT",
+          "by" : "mymk1"
+        },
+        "oas-detached" : true
+      }
+    }
+  }, {
+    "id" : "01bddefa-df51-4643-b06f-10237d2d2006",
+    "name" : "Create a pet - generic",
+    "request" : {
+      "urlPathTemplate" : "/pets",
+      "method" : "POST"
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "01bddefa-df51-4643-b06f-10237d2d2006",
+    "persistent" : true,
+    "priority" : 4,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:31:16.663877985Z",
+          "via" : "OAS3_IMPORT",
+          "by" : "mymk1"
+        },
+        "oas-detached" : true
+      }
+    }
+  }, {
+    "id" : "2688f440-d01d-4f7d-b19d-6bd566b7b87f",
+    "name" : "List all pets - generic",
+    "request" : {
+      "urlPathTemplate" : "/pets",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "[ {\n  \"id\" : 7653716742362659455,\n  \"name\" : \"Ayesha Ryan\",\n  \"tag\" : \"pariatur\"\n}, {\n  \"id\" : 3035172078895248149,\n  \"name\" : \"Orval Abshire\",\n  \"tag\" : \"necessitatibus\"\n}, {\n  \"id\" : 1937131285208859543,\n  \"name\" : \"Sebrina Walker\",\n  \"tag\" : \"incidunt\"\n}, {\n  \"id\" : 4065598180484988182,\n  \"name\" : \"Shannon Harvey\",\n  \"tag\" : \"non\"\n}, {\n  \"id\" : 2481914616163411701,\n  \"name\" : \"Lawana Hackett PhD\",\n  \"tag\" : \"rerum\"\n}, {\n  \"id\" : 2975460347159208571,\n  \"name\" : \"Marcia Tremblay\",\n  \"tag\" : \"cum\"\n}, {\n  \"id\" : 5328198183580258708,\n  \"name\" : \"Jacquiline Wehner\",\n  \"tag\" : \"ipsa\"\n}, {\n  \"id\" : 7290105283909634650,\n  \"name\" : \"Laine Ryan I\",\n  \"tag\" : \"voluptatibus\"\n}, {\n  \"id\" : 6598274860280542010,\n  \"name\" : \"Debroah Stark\",\n  \"tag\" : \"esse\"\n}, {\n  \"id\" : 913393003613331440,\n  \"name\" : \"Dr. Aron Hermiston\",\n  \"tag\" : \"incidunt\"\n}, {\n  \"id\" : 321322501284440867,\n  \"name\" : \"Tom Thompson I\",\n  \"tag\" : \"assumenda\"\n}, {\n  \"id\" : 6353271860099155073,\n  \"name\" : \"Jonas Jakubowski\",\n  \"tag\" : \"aaaad\"\n}, {\n  \"id\" : 1184809262515183067,\n  \"name\" : \"Rana Kessler\",\n  \"tag\" : \"minus\"\n}, {\n  \"id\" : 8227507019131036412,\n  \"name\" : \"Rex Rohan\",\n  \"tag\" : \"dolorem\"\n}, {\n  \"id\" : 1375301397098214187,\n  \"name\" : \"Enrique Bechtelar V\",\n  \"tag\" : \"temporibus\"\n}, {\n  \"id\" : 8797980613042894027,\n  \"name\" : \"Ms. Ray Predovic\",\n  \"tag\" : \"optio\"\n}, {\n  \"id\" : 5886736479083100002,\n  \"name\" : \"Miss Dominick Stroman\",\n  \"tag\" : \"qui\"\n}, {\n  \"id\" : 8473944527276785553,\n  \"name\" : \"Palmer Cummerata\",\n  \"tag\" : \"dolor\"\n}, {\n  \"id\" : 4573343040623505778,\n  \"name\" : \"Jerrell Schinner\",\n  \"tag\" : \"culpa\"\n}, {\n  \"id\" : 4418698698462110762,\n  \"name\" : \"Mrs. Halina McGlynn\",\n  \"tag\" : \"velit\"\n}, {\n  \"id\" : 2495118208354459760,\n  \"name\" : \"Meda Fay\",\n  \"tag\" : \"voluptatibus\"\n}, {\n  \"id\" : 5933761378211464489,\n  \"name\" : \"Miss Susanne Pfannerstill\",\n  \"tag\" : \"magni\"\n}, {\n  \"id\" : 373004913102442314,\n  \"name\" : \"Esteban Pollich\",\n  \"tag\" : \"consequuntur\"\n}, {\n  \"id\" : 2906780967795111311,\n  \"name\" : \"Sharyl Kreiger\",\n  \"tag\" : \"uuuut\"\n}, {\n  \"id\" : 7741695054627131469,\n  \"name\" : \"Alejandra Beer\",\n  \"tag\" : \"voluptate\"\n}, {\n  \"id\" : 356733609911128070,\n  \"name\" : \"Adeline Franecki\",\n  \"tag\" : \"quibusdam\"\n}, {\n  \"id\" : 7389328270042662530,\n  \"name\" : \"Ferne Balistreri\",\n  \"tag\" : \"qui\"\n}, {\n  \"id\" : 1150641827219262283,\n  \"name\" : \"Robin Sipes\",\n  \"tag\" : \"qui\"\n}, {\n  \"id\" : 4942375824118935600,\n  \"name\" : \"Claudio Simonis\",\n  \"tag\" : \"deserunt\"\n}, {\n  \"id\" : 5558803429343856070,\n  \"name\" : \"Dr. Lowell Glover\",\n  \"tag\" : \"eum\"\n}, {\n  \"id\" : 5243509251647060282,\n  \"name\" : \"Georgia Batz\",\n  \"tag\" : \"sed\"\n}, {\n  \"id\" : 2241044526668244316,\n  \"name\" : \"Arnetta Tromp\",\n  \"tag\" : \"est\"\n}, {\n  \"id\" : 2409175519241525663,\n  \"name\" : \"Miss Livia Kuhlman\",\n  \"tag\" : \"nihil\"\n}, {\n  \"id\" : 8279448138941633226,\n  \"name\" : \"Lawrence Fisher MD\",\n  \"tag\" : \"eeeea\"\n}, {\n  \"id\" : 762843636936660731,\n  \"name\" : \"Florence Tremblay\",\n  \"tag\" : \"nihil\"\n}, {\n  \"id\" : 8292498111067575617,\n  \"name\" : \"Francisco Mann\",\n  \"tag\" : \"quibusdam\"\n}, {\n  \"id\" : 1752102205530018662,\n  \"name\" : \"Patti Graham\",\n  \"tag\" : \"sed\"\n}, {\n  \"id\" : 2986841684649000080,\n  \"name\" : \"Demarcus Bauch\",\n  \"tag\" : \"quam\"\n}, {\n  \"id\" : 440132040997330679,\n  \"name\" : \"Bob Bartoletti\",\n  \"tag\" : \"tenetur\"\n}, {\n  \"id\" : 6534536007486421610,\n  \"name\" : \"Linsey Runolfsson\",\n  \"tag\" : \"eeeet\"\n}, {\n  \"id\" : 1928609301766069963,\n  \"name\" : \"Adell VonRueden\",\n  \"tag\" : \"similique\"\n}, {\n  \"id\" : 8061191799242201743,\n  \"name\" : \"Traci Stoltenberg\",\n  \"tag\" : \"quod\"\n}, {\n  \"id\" : 8724501528909658431,\n  \"name\" : \"Roland Mohr\",\n  \"tag\" : \"vel\"\n}, {\n  \"id\" : 448217636893659641,\n  \"name\" : \"Kyle Heathcote\",\n  \"tag\" : \"facilis\"\n}, {\n  \"id\" : 5746476167063660015,\n  \"name\" : \"Victor Effertz\",\n  \"tag\" : \"est\"\n}, {\n  \"id\" : 751595307084779239,\n  \"name\" : \"Vida Dietrich\",\n  \"tag\" : \"reprehenderit\"\n}, {\n  \"id\" : 2050768694472277433,\n  \"name\" : \"Mrs. Tiffani Dooley\",\n  \"tag\" : \"consequatur\"\n}, {\n  \"id\" : 4846727333954691221,\n  \"name\" : \"Kum Pollich\",\n  \"tag\" : \"cupiditate\"\n}, {\n  \"id\" : 3455820821756622949,\n  \"name\" : \"Williemae Kautzer\",\n  \"tag\" : \"omnis\"\n}, {\n  \"id\" : 4087668121262475438,\n  \"name\" : \"Noah Schowalter\",\n  \"tag\" : \"amet\"\n}, {\n  \"id\" : 615682870450056938,\n  \"name\" : \"Mabel Casper\",\n  \"tag\" : \"uuuut\"\n}, {\n  \"id\" : 351949156914025109,\n  \"name\" : \"Nita Quitzon\",\n  \"tag\" : \"aut\"\n}, {\n  \"id\" : 1302036262907306417,\n  \"name\" : \"Genesis Aufderhar\",\n  \"tag\" : \"consequuntur\"\n}, {\n  \"id\" : 4425536783601278275,\n  \"name\" : \"Mr. Anthony Harber\",\n  \"tag\" : \"numquam\"\n}, {\n  \"id\" : 1560345346585450798,\n  \"name\" : \"Grant Kihn\",\n  \"tag\" : \"dolor\"\n}, {\n  \"id\" : 4479032070274813977,\n  \"name\" : \"Harley Emmerich\",\n  \"tag\" : \"reprehenderit\"\n}, {\n  \"id\" : 29001448528209401,\n  \"name\" : \"Corina Von\",\n  \"tag\" : \"architecto\"\n}, {\n  \"id\" : 450063188011294858,\n  \"name\" : \"Exie Murray\",\n  \"tag\" : \"non\"\n}, {\n  \"id\" : 4814066311495140033,\n  \"name\" : \"Abraham Cremin\",\n  \"tag\" : \"animi\"\n} ]",
+      "headers" : {
+        "Content-Type" : "application/json"
+      }
+    },
+    "uuid" : "2688f440-d01d-4f7d-b19d-6bd566b7b87f",
+    "persistent" : true,
+    "priority" : 4,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:31:16.663706702Z",
+          "via" : "OAS3_IMPORT",
+          "by" : "mymk1"
+        },
+        "oas-detached" : true
+      }
+    }
+  }, {
+    "id" : "0af6fa76-9f9e-49cb-b368-6e134db471f6",
+    "name" : "GET a JSON resource",
+    "request" : {
+      "url" : "/json/1",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"id\": 1,\n  \"value\": \"things\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json; charset=UTF-8"
+      }
+    },
+    "uuid" : "0af6fa76-9f9e-49cb-b368-6e134db471f6",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:28:44.390015271Z",
+          "via" : "SYSTEM"
+        },
+        "response-example-attachment" : "GET a JSON resource"
+      }
+    }
+  }, {
+    "id" : "13c06db9-afe3-40c7-bc58-68f2f91688e2",
+    "name" : "Match a JSON POST on the request body",
+    "request" : {
+      "url" : "/json",
+      "method" : "POST",
+      "bodyPatterns" : [ {
+        "equalToJson" : "{\n  \"id\": 12345,\n  \"value\": \"abc-def-ghi\"\n}"
+      } ]
+    },
+    "response" : {
+      "status" : 201,
+      "body" : "{\n  \"message\": \"Success\"\n}",
+      "headers" : {
+        "Content-Type" : "application/json; charset=UTF-8"
+      }
+    },
+    "uuid" : "13c06db9-afe3-40c7-bc58-68f2f91688e2",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:28:44.389967347Z",
+          "via" : "SYSTEM"
+        },
+        "response-example-attachment" : "Match a JSON POST on the request body"
+      }
+    }
+  }, {
+    "id" : "9e9b4397-75ce-433d-a85e-a7456423b7e5",
+    "name" : "Only match if Accept header is for application/json",
+    "request" : {
+      "url" : "/json/2",
+      "method" : "PUT",
+      "headers" : {
+        "Accept" : {
+          "contains" : "application/json"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "{\n  \"message\": \"Success\"\n}",
+      "headers" : { }
+    },
+    "uuid" : "9e9b4397-75ce-433d-a85e-a7456423b7e5",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:28:44.389947896Z",
+          "via" : "SYSTEM"
+        },
+        "response-example-attachment" : "Only match if Accept header is for application/json"
+      }
+    }
+  }, {
+    "id" : "b131a499-ef5e-4b99-bf93-02ceeee53af4",
+    "name" : "Only match if query parameter is present and in the correct format",
+    "request" : {
+      "urlPath" : "/search",
+      "method" : "GET",
+      "queryParameters" : {
+        "q" : {
+          "matches" : "[A-Za-z0-9]*"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "<results>\n  <result>one</result>\n  <result>two</result>\n  <result>three</result>\n</results>",
+      "headers" : {
+        "Content-Type" : "application/xml; charset=UTF-8"
+      }
+    },
+    "uuid" : "b131a499-ef5e-4b99-bf93-02ceeee53af4",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:28:44.389938801Z",
+          "via" : "SYSTEM"
+        },
+        "response-example-attachment" : "Only match if query parameter is present and in the correct format"
+      }
+    }
+  }, {
+    "id" : "9f28b577-bbc1-4e47-9318-561f546f5558",
+    "name" : "Delayed response",
+    "request" : {
+      "url" : "/delayed",
+      "method" : "GET"
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "\nThis will appear after about 2 seconds!\n",
+      "headers" : { },
+      "fixedDelayMilliseconds" : 2000
+    },
+    "uuid" : "9f28b577-bbc1-4e47-9318-561f546f5558",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:28:44.389929109Z",
+          "via" : "SYSTEM"
+        },
+        "response-example-attachment" : "Delayed response"
+      }
+    }
+  }, {
+    "id" : "909f9726-5679-403c-b8c3-98d6f0e3c177",
+    "name" : "Fault - connection prematurely closed by the server",
+    "request" : {
+      "url" : "/fault",
+      "method" : "DELETE"
+    },
+    "response" : {
+      "status" : 200,
+      "fault" : "EMPTY_RESPONSE"
+    },
+    "uuid" : "909f9726-5679-403c-b8c3-98d6f0e3c177",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:28:44.389915121Z",
+          "via" : "SYSTEM"
+        },
+        "response-example-attachment" : "Fault - connection prematurely closed by the server"
+      }
+    }
+  }, {
+    "id" : "81168cac-5f6e-40e7-a547-f9183a30cfb4",
+    "name" : "Show uppercased request header value in the response body using Handlebars templating",
+    "request" : {
+      "url" : "/templated",
+      "method" : "GET",
+      "headers" : {
+        "X-My-Header" : {
+          "matches" : "my_value_[0-9]{5}"
+        }
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : "My header value is: {{upper request.headers.X-My-Header}}\n",
+      "headers" : { },
+      "transformers" : [ "response-template" ]
+    },
+    "uuid" : "81168cac-5f6e-40e7-a547-f9183a30cfb4",
+    "persistent" : true,
+    "priority" : 5,
+    "metadata" : {
+      "mocklab" : {
+        "created" : {
+          "at" : "2024-01-22T19:28:44.389836774Z",
+          "via" : "SYSTEM"
+        },
+        "response-example-attachment" : "Show uppercased request header value in the response body using Handlebars templating"
+      }
+    }
+  } ],
+  "meta" : {
+    "total" : 13
+  }
+}

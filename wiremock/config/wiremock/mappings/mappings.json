@@ -1,0 +1,14 @@
+{
+    "request": {
+        "method": "GET",
+        "url": "/file/b8b6461d-75c7-4908-a418-777140912059"
+    },
+    "response": {
+        "status": 200,
+        "bodiFileName": "Libro.xlsx",
+        "headers": {
+            "Content-Type": "multipart/form-data",
+            "Content-Disposition": "attachment;filename=\"Libro1.xlsx\""
+        }
+    }
+}
